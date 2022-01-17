@@ -1,0 +1,420 @@
+
+body{
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Truquillo para la navegacion entre la misma pagina*/
+.bookmark:before{
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+    content: "*";
+}
+
+
+
+/* INICIO del header*/
+
+header{
+    box-shadow: 0px 1px 10px 0px #e2dede;
+    display: flex; /*Caja flexible*/
+    justify-content: space-between; /*espaciado entre los elementos hijos dentro del header*/
+    align-items: center; /* alinea demanera vertical los elementos */
+    flex-direction: row; /*convierte todos los elementos en una lista horizontal*/
+    flex-wrap: wrap; /* permite el desplazamiento de los elelemntos para evitar el desbordamiento*/
+    padding: 0px 100px 0px 100px; /*top right bottom left*/
+    position: sticky; /* fijar elementos apartir de una posicion dada*/
+    top:0px;
+    z-index: 1;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a{
+    text-decoration: none; /* elimina los marcadores a los enlaces */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Mulish';
+    color: black;
+}
+
+nav a:hover{
+    color: #2a3fe6;
+}
+
+nav .button{
+    font-family: 'Mulish';
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #2a3fe6;
+    color: white;
+    margin-left: 30px;
+    padding-right: 15px;
+    border-style: none; /*Elimina el borde por defecto de los botones */
+    text-decoration: none;
+}
+
+nav .button:hover{
+    background-color: #5e01c8;
+    color: white;
+}
+
+i{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Logo{
+    font-family: 'Kanit';
+    font-size: 15px;
+}
+
+/* !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* !Primera seccion*/
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    
+}
+
+/* !article numero 1 de la primera seccion*/
+
+.main article{
+    width: 40%;
+    /*overflow: auto;*/
+    flex-grow: 1;
+    height: 81vh;
+}
+
+.main article h1{
+    font-family: 'Newsreader';
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+.main article p{
+    font-family: 'Mulish';
+    color: #6c757c;
+    font-size: 21px;
+}
+
+/* ! article numero 2 de la primera seccion*/
+
+.main .article_cellphone{
+    position: relative; 
+}
+
+.main video{
+    position: absolute;
+    width: 45%;
+    left: 27%;
+    top:1%;
+    border-radius: 10%;
+}
+
+/* ! Inicio Cruz*/
+.main .cruz{
+    position: relative;
+    top: 75%;
+    left: 5%; 
+    width: 85%;
+    transform: rotate(-15deg);
+}
+
+.main .cruz .Cruz_inclinada1{
+    position: absolute;
+    width: 4%;
+    height: 5px;
+    background-color: #7a0dcf;
+    transform: rotate(45deg);
+    border-radius: 5px;
+}
+
+.main .cruz .Cruz_inclinada2{
+    position: absolute;
+    width: 4%;
+    height: 5px;
+    background-color: #7a0dcf;
+    transform: rotate(-45deg);
+    border-radius: 5px;
+}
+/* ! Fin cruz*/
+
+.main .circulo_pequeno{
+    position: absolute;
+    background-color: #7a0dcf;
+    left: 90%;
+    top: 13%;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+.main article .circulo{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(295deg, #ff5fee 0, #e650ea 16.67%, #c83de3 33.33%, #a326d9 50%, #7a0dcf 66.67%, #4c01c8 83.33%, #0007c3 100%); /* !https://mybrandnewlogo.com/es/generador-de-gradiente-de-color */
+    border-radius: 100%;
+    left: 10%;
+    top: 10%;
+    
+}
+
+.main article img{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+}
+
+/* ? ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ?  Segunda seccion Notas */
+
+.Notas {
+    margin-top: 25px;
+}
+
+.Notas article{
+    position: relative;
+}
+.Notas h1{
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 9%;
+    font-family: 'Newsreader';
+    font-size: 80px;
+}
+.Notas div{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 99.3%;
+    opacity: 0.5;
+}
+
+.Notas article img{
+    width: 100%;
+    height: 100vh;
+}
+
+/* ? Boton Programate Educamas*/
+
+.Notas a{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 35px;
+    font-family: 'Kanit';
+    font-size: 16px;
+    top:73%;
+    left: 9%;
+    border-style:solid;
+    border-width: 1px;
+    padding: 15px 25px;
+    border-color: white;
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.Notas a:hover{
+    background-color: white;
+    color: black;
+    transition: 1s; /* ? cuanto dura la animacion */
+    transform: translateY(-10px); /*? transfroma la posicion en el eje y */
+}
+/* ? Fin boton programate educamas*/
+
+/* Todo: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Todo: Tercera seccion de la pagina*/
+
+.Aprendizaje{
+    display: flex;
+    justify-content: center;
+}
+
+.Aprendizaje article{
+    width: 33%;
+    flex-grow: 1;
+    height: 88vh;
+    /*border-style: solid;*/
+}
+
+/*Todo: Primer article de la tercera seccion de la pagina */
+.Aprendizaje .article_cellphone{
+    width: 40%;
+}
+
+/**/
+.Aprendizaje .article_cellphone{
+    position: relative; 
+}
+
+.Aprendizaje video{
+    position: absolute;
+    width: 47%;
+    top:7%;
+    left: 38%;
+    border-radius: 10%;
+}
+
+/* todo: Inicio Cruz*/
+.Aprendizaje .cruz{
+    position: relative;
+    top: 11.9%;
+    left: 95%; 
+    width: 130%;
+}
+
+.Aprendizaje .cruz .Cruz_inclinada1{
+    position: absolute;
+    width: 3.2%;
+    height: 6px;
+    background-color: #2a3fe6;
+    transform: rotate(60deg);
+    border-radius: 5px;
+}
+
+.Aprendizaje .cruz .Cruz_inclinada2{
+    position: absolute;
+    width: 3.2%;
+    height: 6px;
+    background-color: #2a3fe6;
+    transform: rotate(-30deg);
+    border-radius: 5px;
+}
+/* todo: Fin cruz*/
+
+.Aprendizaje .circulo_pequeno{
+    position: absolute;
+    background-color: #2a3fe6;
+    left: 25%;
+    top: 85%;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+
+.Aprendizaje article .circulo{
+    position: absolute;
+    width: 60%;
+    height: 49%;
+    background-image: linear-gradient(295deg, #ff5fee 0, #e650ea 16.67%, #c83de3 33.33%, #a326d9 50%, #7a0dcf 66.67%, #4c01c8 83.33%, #2a3fe6 100%); /* !https://mybrandnewlogo.com/es/generador-de-gradiente-de-color */
+    border-radius: 100%;
+    left: 18%;
+    top: 29.5%;
+}
+
+.Aprendizaje article img{
+    position: absolute;
+    width: 52%;
+    top:6%;
+    left: 35%;
+}
+
+/*todo: Segundo y tercer article de la tercera seccion de la pagina*/
+
+.Aprendizaje .article_icons{
+
+    text-align: center;
+
+}
+
+.Aprendizaje div{
+    height: 50%;
+}
+
+.Aprendizaje .article_icons i{
+    font-size: 70px;
+    background-image: linear-gradient(to top, #b71adf 0, #ba3cec 25%, #8b2bdc 50%, #450ecb 75%, #0009bf 100%);
+    -webkit-background-clip: text;     
+    background-clip: text;     
+    -webkit-text-fill-color:transparent;
+}
+
+.Aprendizaje .article_icons p{
+    font-family: 'Mulish';
+    font-size: 16px;
+    line-height:26px;
+    font-weight: bold;
+    color:#7d8083;
+}
+.Aprendizaje .article_icons h1{
+    font-family: 'Kanit';
+    font-size: 28px;
+    line-height:34px; /*todo Interlineado*/
+    margin-bottom: 0px;
+}
+
+/*todo tercera division de la pagina */
+
+.division_tres div{
+    padding-right: 175px;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Footer*/
+footer{
+    height: 120px;
+    background-color: black;
+    text-align: center;
+    padding-top: 25px;
+}
+
+footer p{
+    font-family: 'Kanit';
+    color: rgb(129, 126, 126);
+    margin: 0px;
+    font-size: 16px;
+    align-items: center;
+}
+
+footer a{
+    font-family: 'Kanit';
+    font-size: 16px;
+}
+
+footer span{
+    color: rgb(129, 126, 126);
+    font-size: 18px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(129, 126, 126);
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer .parrafo span{
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,567 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 6vw;
+    box-shadow: 0px 1px 10px 0px #e2dede;
+    position: sticky; /* fijar elementos apartir de una posicion dada*/
+    top: 0px;
+    z-index: 1;
+    background-color: white;
+}
+
+/* Truquillo para la navegacion entre la misma pagina*/
+.bookmark:before{
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -50px;
+    z-index: 2;
+    content: "*";
+}
+
+/* Inicio Menu responsivo */
+.menu{
+    display: none;
+    
+}
+
+.menu a:hover{
+    color: khaki;
+}
+
+.menu button{
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 20px;
+    background-color: #2a3fe6;
+    color: white;
+    text-decoration: none;
+    border-color: #2a3fe6;
+}
+
+.submenu{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    display: none;
+    
+}
+
+.submenu a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    left: 0px;
+    height: 7vh;
+}
+
+.menu:hover .submenu{
+    display: flex;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+}
+
+/* Fin menu responsivo */
+
+/*Deshabilito el submenu*/
+/*
+menu{
+    display: none;
+}*/
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: 
+    [class*="col-"] {
+        width: 100%;
+    }*/
+    .menu{
+        display: flex;
+    }
+    
+    header nav > a{
+        display: none;
+    }
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Seccion del header*/
+
+.Logo{
+    font-family: 'Kanit';
+}
+
+header nav{
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+header nav > a{
+    font-family: 'Mulish';
+    color: black;
+    text-decoration: none;
+}
+
+header nav > a:hover{
+    color: #2a3fe6;
+}
+
+
+
+header nav .button{
+    display: flex;
+    font-family: 'Mulish';
+    border-radius: 2vw;
+    padding: 0.7vw 1.2vw;
+    gap: 0.5vw;
+    background-color: #2a3fe6;
+    color: white;
+    border-style: none; /*Elimina el borde por defecto de los botones */
+    text-decoration: none;
+}
+
+header nav .button:hover{
+    color: white;
+    background-color: #5e01c8;
+}
+
+/* Fin del header */
+
+/* ! segunda seccion NOTAS */
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.main article{
+    width: 50vw; 
+    height: 90vh; 
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .main article{
+        width: 100%;
+        height: 50vh; 
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .main article{
+        width: 100%;
+        height: 30vh; 
+    }
+}
+
+/* !article numero 1 de la primera seccion*/
+
+.main article h1{
+    font-family: 'Newsreader';
+    font-size: 6.5vw;
+    margin-bottom: 0px;
+    padding: 0vw 6vw;
+}
+
+.main article p{
+    font-family: 'Mulish';
+    color: #6c757c;
+    font-size: 1.5vw;
+    line-height: 4.8vh;
+    padding: 0vw 6vw;
+}
+
+/* ! article numero 2 de la primera seccion*/
+
+.main .article_cellphone{
+    position: relative; 
+    margin-right:4.5vw;
+}
+
+.main video{
+    position: absolute;
+    width: 18.5vw;
+    left: 50%;
+    top:3vh;
+    transform: translate(-50%, 0);    
+    border-radius: 10%;
+}
+
+.main article img{
+    position: absolute;
+    width: 20.5vw;
+    top:2vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+/*! Contenedor Figuras*/
+
+.main article .Figuras{
+    position: relative;
+    width: 31vw;
+    height: 27vw;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    top:7vw;
+}
+
+/*! Circulo */
+
+.main article .circulo{
+    position: absolute;
+    width: 31vw;
+    height: 31vw;
+    background-image: linear-gradient(295deg, #ff5fee 0, #e650ea 16.67%, #c83de3 33.33%, #a326d9 50%, #7a0dcf 66.67%, #4c01c8 83.33%, #0007c3 100%); /* !https://mybrandnewlogo.com/es/generador-de-gradiente-de-color */
+    border-radius: 100%;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    top:5vw;
+}
+
+
+
+/* ! Inicio Cruz*/
+.main .cruz{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main .cruz .Cruz_inclinada1{
+    position: absolute;
+    width: 1.2em;
+    height: 0.3em;
+    background-color: #7a0dcf;
+    transform: rotate(35deg);
+    border-radius: 5px;
+    top:99%;
+}
+
+.main .cruz .Cruz_inclinada2{
+    position: absolute;
+    width: 1.2em;
+    height: 0.3em;
+    background-color: #7a0dcf;
+    transform: rotate(-55deg);
+    border-radius: 5px;
+    top:99%;
+}
+/* ! Fin cruz*/
+
+.main .circulo_pequeno{
+    position: absolute;
+    background-color: #7a0dcf;
+    left: 97%;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+/* ? ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ?  Segunda seccion Notas */
+
+.Notas{
+    width: 100%;
+    height: 90vh; 
+}
+
+.Notas article{
+    position: relative;
+}
+
+.Notas h1{
+    position: absolute;
+    color: white;
+    margin: 0px;
+    top: 45%;
+    transform: translate(0, -45%); 
+    left: 9%;
+    font-family: 'Newsreader';
+    font-size: 6.3vw;
+}
+
+.Notas article img{
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+}
+.Notas .sombra{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 99.1%;
+    opacity: 0.5;
+}
+
+/* ? Boton Programate Educamas*/
+
+.Notas a{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 35px;
+    font-family: 'Kanit';
+    font-size: 16px;
+    top:73%;
+    left: 9%;
+    border-style:solid;
+    border-width: 1px;
+    padding: 15px 25px;
+    border-color: white;
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.Notas a:hover{
+    background-color: white;
+    color: black;
+    transition: 1s; /* ? cuanto dura la animacion */
+    transform: translateY(-10px); /*? transfroma la posicion en el eje y */
+}
+/* ? Fin boton programate educamas*/
+
+/* Todo: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Todo: Tercera seccion de la pagina*/
+
+.Aprendizaje{
+    display: flex;
+    justify-content: center;
+}
+
+.Aprendizaje article{
+    width: 33%;
+    flex-grow: 1;
+    height: 90vh;
+    /*border-style: solid;*/
+}
+
+/*Todo: Primer article de la tercera seccion de la pagina */
+
+
+.Aprendizaje .article_cellphone{
+    position: relative; 
+    width: 40%;
+    margin-right:4.5vw;
+}
+
+/**/
+.Aprendizaje .article_cellphone{
+    position: relative; 
+}
+
+
+.Aprendizaje video{
+    position: absolute;
+    width: 17.5vw;
+    left: 50%;
+    top:5vh;
+    transform: translate(-23%, 0);    
+    border-radius: 10%;
+}
+
+.Aprendizaje article img{
+    position: absolute;
+    width: 19.5vw;
+    top:4vh;
+    left: 50%;
+    transform: translate(-25%, 0);
+    
+}
+
+/*todo Contenedor Figuras*/
+
+.Aprendizaje article .Figuras{
+    position: relative;
+    width: 31vw;
+    height: 30vw;
+    left: 50%;
+    transform: translate(-35%, 0); 
+    top:7vw;
+   
+}
+
+/*todo Circulo */
+
+.Aprendizaje article .circulo{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    background-image: linear-gradient(295deg, #ff5fee 0, #e650ea 16.67%, #c83de3 33.33%, #a326d9 50%, #7a0dcf 66.67%, #4c01c8 83.33%, #0007c3 100%); /* !https://mybrandnewlogo.com/es/generador-de-gradiente-de-color */
+    border-radius: 100%;
+    left: 50%;
+    transform: translate(-60%, 0); 
+    top:12vw;
+}
+
+
+
+/* todo Inicio Cruz*/
+.Aprendizaje .cruz{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Aprendizaje .cruz .Cruz_inclinada1{
+    position: absolute;
+    width: 1.27em;
+    height: 0.4em;
+    background-color: #7a0dcf;
+    transform: rotate(55deg);
+    border-radius: 5px;
+    left:93%;
+    top:-9%;
+}
+
+.Aprendizaje .cruz .Cruz_inclinada2{
+    position: absolute;
+    width: 1.27em;
+    height: 0.4em;
+    background-color: #7a0dcf;
+    transform: rotate(-35deg);
+    border-radius: 5px;
+    left:93%;
+    top:-9%;
+}
+/* todo Fin cruz*/
+
+.Aprendizaje .circulo_pequeno{
+    position: absolute;
+    background-color: #7a0dcf;
+    width: 12px;
+    height: 12px;
+    top:93%;
+    left: 7%;
+    border-radius: 100%;
+}
+
+/*todo: Segundo y tercer article de la tercera seccion de la pagina*/
+
+.Aprendizaje .article_icons{
+
+    text-align: center;
+
+}
+
+.Aprendizaje div{
+    height: 50%;
+}
+
+.Aprendizaje .article_icons i{
+    font-size: 70px;
+    background-image: linear-gradient(to top, #b71adf 0, #ba3cec 25%, #8b2bdc 50%, #450ecb 75%, #0009bf 100%);
+    -webkit-background-clip: text;     
+    background-clip: text;     
+    -webkit-text-fill-color:transparent;
+}
+
+.Aprendizaje .article_icons p{
+    font-family: 'Mulish';
+    font-size: 16px;
+    line-height:26px;
+    font-weight: bold;
+    color:#7d8083;
+}
+.Aprendizaje .article_icons h1{
+    font-family: 'Kanit';
+    font-size: 28px;
+    line-height:34px; /*todo Interlineado*/
+    margin-bottom: 0px;
+}
+
+/*todo tercera division de la pagina */
+
+.division_tres div{
+    padding-right: 175px;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Footer*/
+footer{
+    height: 120px;
+    background-color: black;
+    text-align: center;
+    padding-top: 25px;
+}
+
+footer p{
+    font-family: 'Kanit';
+    color: rgb(129, 126, 126);
+    margin: 0px;
+    font-size: 16px;
+    align-items: center;
+}
+
+footer a{
+    font-family: 'Kanit';
+    font-size: 16px;
+}
+
+footer span{
+    color: rgb(129, 126, 126);
+    font-size: 18px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(129, 126, 126);
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer .parrafo span{
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* java script*/
+
+.new_menu{
+    color: #2a3fe6;
+    box-shadow: 0px 1px 0px 0px black;
+}
+
+.old_menu{
+    font-family: 'Mulish';
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+
